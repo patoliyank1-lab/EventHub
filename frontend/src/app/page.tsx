@@ -37,9 +37,6 @@ export default function Home() {
     getAllEvents();
   }, [refresh]);
 
-  useEffect(() => {
-    console.log(events);
-  }, [events]);
 
   const onDelete = async (ev: EventType) => {
     if (!isLogin) {
@@ -100,8 +97,8 @@ export default function Home() {
                   {new Date(ev.eventTime).toLocaleTimeString()}
                 </TableCell>
                 <TableCell>
-                  <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${ev.isActive ? "bg-green-100 text-green-700" : "bg-red-100 text-red-600"}`}>
-                    {ev.isActive ? "Active" : "Inactive"}
+                  <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${(new Date() < new Date(ev.eventTime)) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-600"}`}>
+                    {(new Date() < new Date(ev.eventTime))  ? "Active" : "Inactive"}
                   </span>
                 </TableCell>
                 <TableCell>

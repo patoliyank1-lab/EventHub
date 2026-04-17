@@ -114,7 +114,6 @@ export default function EventProvider({
     location: string;
   }) => {
     try {
-      console.log(JSON.stringify({ name, eventTime, createdBy, location }));
       const response = await fetch(EVENT.EVENT, {
         method: "POST",
         headers: {
@@ -193,10 +192,6 @@ export default function EventProvider({
     }
   };
 
-  useEffect(() => {
-    getAllEvents();
-    console.log(events);
-  }, []);
 
   return (
     <EventContext.Provider

@@ -13,7 +13,6 @@ export default function Profile ()  {
       if(!isLogin) router.push("/login")
     },[user])
 
-    console.log(user, isLogin)
 
   return (<>
 <div className="h-screen w-full flex flex-col justify-center items-center">
