@@ -1,7 +1,5 @@
 # 📌 EventHub – Event Management Dashboard
 
-test
-
 ## 🎯 Final Deliverable
 
 A **beautiful, responsive Event Management Dashboard** that demonstrates:
